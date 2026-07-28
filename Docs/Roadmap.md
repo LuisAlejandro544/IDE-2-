@@ -30,6 +30,10 @@ Este documento define la hoja de ruta y planificación de características para 
   - 🐾 **Código Paso a Paso**: Modo supervisado donde los sub-agentes proponen cambios que el usuario aprueba con un clic.
   - 🚀 **Código Completo (Autónomo)**: Modo 100% automático donde la IA ejecuta las herramientas e implementa todo el código directamente.
 - [x] **Llamada a Herramientas (Tool Calling)**: Integración de herramientas en tiempo real para Gemini y OpenRouter.
+- [x] **Bucle de Agente Multipasos (Multi-Turn Iterative Tool Loop)**:
+  - Bucle de ejecución continuo (hasta 5 iteraciones automáticas por consulta).
+  - Al ejecutar una herramienta (`create_file`, `edit_file`, etc.), los resultados se inyectan en el historial de la conversación y se realiza una llamada HTTP subsiguiente a OpenRouter/Gemini.
+  - Renueva el límite de tokens de salida por llamada en capas gratuitas (evita cortes de respuesta) y habilita razonamiento continuo en múltiples pasos.
 - [x] **Operaciones del Agente**: `get_project_structure`, `read_file`, `edit_file`, `create_file`, `delete_file` y `get_diagnostics`.
 - [x] **Sistema de Skills `.md` Aisladas por Módulos (`/skills/`)**:
   - `/skills/core/tool_usage.md`: Guía de herramientas y restricciones.
