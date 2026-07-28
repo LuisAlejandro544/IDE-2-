@@ -5,6 +5,7 @@ import com.example.data.repository.delegate.template.AndroidComposeTemplateProvi
 import com.example.data.repository.delegate.template.CppAppTemplateProvider
 import com.example.data.repository.delegate.template.CppNativeTemplateProvider
 import com.example.data.repository.delegate.template.CppWebTemplateProvider
+import com.example.data.repository.delegate.template.CsharpWebTemplateProvider
 import com.example.data.repository.delegate.template.NodeApiTemplateProvider
 import com.example.data.repository.delegate.template.ReactPureTemplateProvider
 import com.example.data.repository.delegate.template.RustServerTemplateProvider
@@ -44,5 +45,9 @@ class ProjectTemplateDelegate(
 
     suspend fun createNodeApiTemplate(projectId: Long) {
         projectFileDao.insertFiles(NodeApiTemplateProvider.getFiles(projectId))
+    }
+
+    suspend fun createCsharpWebTemplate(projectId: Long) {
+        projectFileDao.insertFiles(CsharpWebTemplateProvider.getFiles(projectId))
     }
 }

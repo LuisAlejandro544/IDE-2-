@@ -99,6 +99,7 @@ class IdeRepository(
             framework.contains("React", true) -> "⚛️"
             framework.contains("C++ Web", true) -> "🌐"
             framework.contains("C++ App", true) -> "📱"
+            framework.contains("C#", true) || framework.contains("Csharp", true) || framework.contains(".NET", true) -> "🔷"
             framework.contains("Compose", true) || framework.contains("Android", true) -> "📱"
             framework.contains("Rust", true) -> "🦀"
             framework.contains("C++", true) -> "⚡"
@@ -117,6 +118,7 @@ class IdeRepository(
             framework.contains("React", true) -> templateDelegate.createReactPureTemplate(projectId)
             framework.contains("C++ Web", true) -> templateDelegate.createCppWebTemplate(projectId)
             framework.contains("C++ App", true) -> templateDelegate.createCppAppTemplate(projectId)
+            framework.contains("C#", true) || framework.contains("Csharp", true) || framework.contains(".NET", true) -> templateDelegate.createCsharpWebTemplate(projectId)
             framework.contains("Compose", true) || framework.contains("Android", true) -> templateDelegate.createAndroidComposeTemplate(projectId)
             framework.contains("Rust", true) -> templateDelegate.createRustServerTemplate(projectId)
             framework.contains("C++", true) -> templateDelegate.createCppAppTemplate(projectId)

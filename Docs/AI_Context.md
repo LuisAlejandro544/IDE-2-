@@ -30,13 +30,13 @@ Este documento sirve como manual de incorporación para cualquier Agente de Inte
      - `delete_file(path)`: Elimina elementos del workspace.
      - `get_diagnostics()`: Consulta los registros de la Consola de Diagnóstico en Vivo y errores del Linter.
 
-3. **Sistema de Skills Contextuales Integradas en Archivos `.md` (`/skills/`)**:
-   - Las habilidades se almacenan en archivos `.md` separados que funcionan por detrás y no ensucian el gestor de archivos del proyecto del usuario:
-     - **Guía de Uso de Herramientas (`tool_usage_guide.md`)**: Instruye al modelo sobre cómo usar sus herramientas. **Prohibición estricta**: No se permite reescribir un archivo entero usando `edit_file`.
-     - **UI/UX Design (`design_ui_ux.md`)**: Estética Material 3, tipografía con jerarquía, paleta cromática equilibrada e interacciones fluidas.
-     - **Responsive Layout (`responsive_layout.md`)**: Estrategia Mobile-First, Flexbox/Grid, clamp() y prevención de desbordamientos.
-     - **Clean Logic & ES Modules (`clean_logic.md`)**: Funciones puras, JS ES6+, Import Maps (`<script type="importmap">`), Módulos ES (`import ... from 'paquete'` vía esm.sh) para librerías npm sin bundlers, manejo de errores con try-catch y validación de datos.
-     - **C++ Development (`cpp_development.md`)**: Plantillas y arquitectura modular para **C++ Web** (WebAssembly/Emscripten) y **C++ App** (Android NDK/JNI).
+3. **Sistema de Skills Contextuales Aisladas en Módulos (`/skills/`)**:
+   - Las habilidades se almacenan en archivos `.md` modularizados por tecnología en carpetas independientes:
+     - **`/skills/core/tool_usage.md`**: Instruye sobre el uso de herramientas y prohíbe explícitamente reescribir archivos enteros en `edit_file`.
+     - **`/skills/web/`**: `web_design.md` (UI/UX M3), `web_logic.md` (JS ES6+, Import Maps, Módulos ES), `web_responsive.md` (Layouts Mobile-First Flexbox/Grid).
+     - **`/skills/react/`**: `react_design.md` (Estilado React 18 / M3 / Tailwind), `react_logic.md` (Hooks, JSX Babel, Import Maps), `react_responsive.md` (Layouts adaptativos React).
+     - **`/skills/cpp/`**: `cpp_web.md` (WebAssembly/Emscripten) y `cpp_app.md` (Android NDK / JNI Bridge).
+     - **`/skills/csharp/`**: `csharp_design.md` (Estilado Blazor / M3), `csharp_logic.md` (C# .NET 8/9, LINQ, WASM, JSInterop), `csharp_responsive.md` (Layouts adaptativos C# Web).
 
 4. **Editor de Código Nativo y Coloreado de Sintaxis**:
    - `CodeEditorView.kt` utiliza un `BasicTextField` con un transformador visual (`SyntaxHighlighter.kt`) y un panel lateral con numeración de líneas sincronizado mediante scroll.

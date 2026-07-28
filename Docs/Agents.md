@@ -13,14 +13,25 @@ Este documento especifica las pautas de estilo de código, flujos de trabajo y e
 
 ---
 
-## 🧠 Sistema de Skills de IA Integradas en Archivos `.md` (`/skills/`)
+## 🧠 Sistema de Skills de IA Aisladas por Módulos (`/skills/`)
 
-El motor de inteligencia artificial de DevStudio incorpora 5 Skills nativas en archivos `.md` independientes por detrás en la llamada a la API:
-1. **🛠️ Guía de Herramientas (`tool_usage_guide.md`)**: Enseña al modelo a consultar archivos antes de editar y prohíbe explícitamente reescribir un archivo entero con `edit_file`.
-2. **🎨 Diseños (UI/UX) (`design_ui_ux.md`)**: Estética moderna, sombras sutiles, bordes suaves y Material Design 3.
-3. **📱 Responsive (`responsive_layout.md`)**: Maquetación adaptativa Mobile-First con Flexbox, CSS Grid y sin scroll horizontal indeseado.
-4. **⚡ Lógica (Clean Code & Módulos ES) (`clean_logic.md`)**: Código JavaScript ES6+ limpio, Import Maps (`<script type="importmap">`), Módulos ES para importar cualquier librería npm desde CDN, manejo de errores robusto, funciones modulares y validación.
-5. **⚡ C++ Modular (`cpp_development.md`)**: Plantillas y guías especializadas para **C++ Web** (WebAssembly / Emscripten) y **C++ App** (Android NDK / JNI).
+El motor de inteligencia artificial de DevStudio incorpora un sistema de 12 Skills especializadas organizadas por tecnología en carpetas independientes (`/skills/core/`, `/skills/web/`, `/skills/react/`, `/skills/cpp/`, `/skills/csharp/`):
+1. **🛠️ Core (`/skills/core/tool_usage.md`)**: Enseña al modelo a consultar archivos antes de editar y prohíbe explícitamente reescribir un archivo entero con `edit_file`.
+2. **🌐 Web HTML/CSS/JS (`/skills/web/`)**:
+   - `web_design.md`: Estética M3, sombras sutiles, bordes suaves y paleta cromática.
+   - `web_logic.md`: JavaScript ES6+ limpio, Import Maps, Módulos ES, manejo de errores y validaciones.
+   - `web_responsive.md`: Maquetación adaptativa Mobile-First con Flexbox y CSS Grid.
+3. **⚛️ React 18 Framework (`/skills/react/`)**:
+   - `react_design.md`: Componentes funcionales M3/Tailwind, estados de carga y animaciones.
+   - `react_logic.md`: Hooks (`useState`, `useEffect`), JSX Babel standalone e Import Maps npm (`esm.sh`).
+   - `react_responsive.md`: Layouts adaptativos en JSX y touch targets accesibles.
+4. **⚡ C++ Modular (`/skills/cpp/`)**:
+   - `cpp_web.md`: Guías y plantillas para **C++ Web** (WebAssembly / Emscripten).
+   - `cpp_app.md`: Guías y plantillas para **C++ App** (Android NDK / JNI).
+5. **🔷 C# / .NET WebAssembly (`/skills/csharp/`)**:
+   - `csharp_design.md`: Estilado Blazor / M3 con paleta .NET.
+   - `csharp_logic.md`: C# .NET moderno, LINQ, Async/Await, JSInterop (`[JSInvokable]`).
+   - `csharp_responsive.md`: Layouts adaptativos Mobile-First en C# Web.
 
 ---
 

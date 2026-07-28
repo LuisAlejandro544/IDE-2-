@@ -31,12 +31,14 @@ Este documento define la hoja de ruta y planificación de características para 
   - 🚀 **Código Completo (Autónomo)**: Modo 100% automático donde la IA ejecuta las herramientas e implementa todo el código directamente.
 - [x] **Llamada a Herramientas (Tool Calling)**: Integración de herramientas en tiempo real para Gemini y OpenRouter.
 - [x] **Operaciones del Agente**: `get_project_structure`, `read_file`, `edit_file`, `create_file`, `delete_file` y `get_diagnostics`.
-- [x] **Sistema de Skills `.md` Detrás de Escena (`/skills/`)**:
-  - `tool_usage_guide.md`: Guía de herramientas y prohibición estricta de reescribir un archivo completo en `edit_file`.
-  - `design_ui_ux.md`: Diseños M3 y estética moderna.
-  - `responsive_layout.md`: Adaptabilidad Mobile-First y Flexbox/Grid.
-  - `clean_logic.md`: Lógica limpia, ES6+, Import Maps, ES Modules y manejo de errores.
-  - `cpp_development.md`: Desarrollo C++ modular para C++ Web y C++ App.
+- [x] **Sistema de Skills `.md` Aisladas por Módulos (`/skills/`)**:
+  - `/skills/core/tool_usage.md`: Guía de herramientas y restricciones.
+  - `/skills/web/`: Skills de diseño (`web_design.md`), lógica (`web_logic.md`) y responsividad (`web_responsive.md`) para Web.
+  - `/skills/react/`: Skills especializadas para React 18: diseño M3/Tailwind (`react_design.md`), lógica y Hooks (`react_logic.md`) y responsividad (`react_responsive.md`).
+  - `/skills/cpp/`: Skills especializadas para C++ WebAssembly (`cpp_web.md`) y C++ App NDK/JNI (`cpp_app.md`).
+  - `/skills/csharp/`: Skills especializadas para C# .NET WebAssembly: diseño Blazor (`csharp_design.md`), lógica LINQ/Async/WASM (`csharp_logic.md`) y responsividad (`csharp_responsive.md`).
+- [x] **Soporte Nativo para C# / .NET WebAssembly**:
+  - Generador de plantillas C# .NET (`Program.cs`, `App.csproj`, `index.html`, `app.js`, `style.css`) con simulador de ejecución Mono/WASM y consola JSInterop.
 - [x] **Soporte Nativo para C++ Modular (C++ Web & C++ App)**:
   - Generador independiente para **C++ Web** (compilado WebAssembly con runner e interfaz web interactiva) y **C++ App** (Android NDK nativo con JNI y simulador de consola móvil).
 - [x] **Soporte Nativo para Import Maps & ES Modules**:

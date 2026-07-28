@@ -46,6 +46,7 @@ fun NewProjectModalDialog(
     val frameworks = listOf(
         "React 18 Puro" to "⚛️ Aplicación Web en React 18 (JSX, Hooks y Estado en tiempo real)",
         "HTML5 / JS / CSS" to "🌐 Aplicación Web interactiva (HTML, CSS, JavaScript)",
+        "C# / .NET WebAssembly" to "🔷 Aplicación C# .NET (LINQ, Async, Mono / WebAssembly Web)",
         "C++ Web" to "⚡🌐 Aplicación Web compilada en C++ (WebAssembly / Navegador)",
         "C++ App" to "📱⚡ Aplicación Nativa Móvil C++ (Android NDK / JNI Core)",
         "Kotlin + Compose" to "📱 App Nativa Android con Jetpack Compose",
